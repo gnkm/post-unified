@@ -1,5 +1,23 @@
 {
   "devDependencies": {
     "prettier": "^3.0.2"
+  },
+  "dependencies": {
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-document": "^6.1.0",
+    "rehype-format": "^4.0.1",
+    "rehype-katex": "^6.0.3",
+    "rehype-mathjax": "^4.0.3",
+    "rehype-slug": "^5.1.0",
+    "rehype-stringify": "^9.0.4",
+    "remark-html": "^15.0.2",
+    "remark-math": "^5.1.1",
+    "remark-mdx": "^2.3.0",
+    "remark-parse": "^10.0.2",
+    "remark-rehype": "^10.1.0",
+    "remark-toc": "^8.0.1",
+    "to-vfile": "^8.0.0",
+    "unified": "^11.0.2",
+    "vfile-reporter": "^8.1.0"
   }
 }
