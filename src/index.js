@@ -24,6 +24,10 @@ const inputFileName = values['file'];
 const contentNoMath = await unified()
   .use(remarkParse)
   .use(remarkRehype)
+  .use(rehypeDocument, {
+    language: 'ja',
+    title: 'No remark-math',
+  })
   .use(rehypeFormat)
   .use(rehypeStringify)
   .process(await read(inputFileName));
@@ -32,6 +36,10 @@ const contentSimpleMath = await unified()
   .use(remarkParse)
   .use(remarkMath)
   .use(remarkRehype)
+  .use(rehypeDocument, {
+    language: 'ja',
+    title: 'remark-math only',
+  })
   .use(rehypeFormat)
   .use(rehypeStringify)
   .process(await read(inputFileName));
@@ -42,6 +50,8 @@ const contentKatex = await unified()
   .use(remarkRehype)
   .use(rehypeKatex)
   .use(rehypeDocument, {
+    language: 'ja',
+    title: 'KaTeX',
     css: 'https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css',
   })
   .use(rehypeFormat)
@@ -54,6 +64,8 @@ const contentKatexNG = await unified()
   .use(remarkRehype)
   .use(rehypeKatex)
   .use(rehypeDocument, {
+    language: 'ja',
+    title: 'KaTeX(no remark-math)',
     css: 'https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css',
   })
   .use(rehypeFormat)
@@ -65,6 +77,10 @@ const contentMathjax = await unified()
   .use(remarkMath)
   .use(remarkRehype)
   .use(rehypeMathjax)
+  .use(rehypeDocument, {
+    language: 'ja',
+    title: 'MathJax',
+  })
   .use(rehypeFormat)
   .use(rehypeStringify)
   .process(await read(inputFileName));
