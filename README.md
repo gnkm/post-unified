@@ -1,4 +1,6 @@
-# ブログ記事: KaTeX 導入とあわせて unified の挙動を確かめた
+# ブログ記事「unified, remark, rehype で遊んでみた」サンプルコード
+
+https://blog.gnkm.info/try-unified-remark-rehype/ のサンプルコード。
 
 ## Usage
 
