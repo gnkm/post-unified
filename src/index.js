@@ -48,6 +48,18 @@ const contentKatex = await unified()
   .use(rehypeStringify)
   .process(await read(inputFileName));
 
+const contentKatexNG = await unified()
+  .use(remarkParse)
+  // .use(remarkMath)
+  .use(remarkRehype)
+  .use(rehypeKatex)
+  .use(rehypeDocument, {
+    css: 'https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css',
+  })
+  .use(rehypeFormat)
+  .use(rehypeStringify)
+  .process(await read(inputFileName));
+
 const contentMathjax = await unified()
   .use(remarkParse)
   .use(remarkMath)
@@ -60,4 +72,5 @@ const contentMathjax = await unified()
 fs.writeFile('html/no-math.html', String(contentNoMath));
 fs.writeFile('html/simple-math.html', String(contentSimpleMath));
 fs.writeFile('html/katex.html', String(contentKatex));
+fs.writeFile('html/katex-ng.html', String(contentKatexNG));
 fs.writeFile('html/mathjax.html', String(contentMathjax));
