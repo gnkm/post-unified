@@ -1,6 +1,6 @@
-# ブログ記事「unified, remark, rehype で遊んでみた」サンプルコード
+# ブログ記事「rehype-katex と rehype-mathjax の比較」サンプルコード
 
-https://blog.gnkm.info/try-unified-remark-rehype/ のサンプルコード。
+https://blog.gnkm.info/rehype-katex-rehype-mathjax/ のサンプルコード。
 
 ## Usage
 
